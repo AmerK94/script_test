@@ -29,6 +29,9 @@ echo '[ RUN      ] AggregateCollectorTest.ExpectsToBeCollectedOnCreation
 [ RUN      ] AggregateCollectorTest.ExpectsNotToBeCollectedWhileWaitingForAnyAggregate
 [ FAILED ] AggregateCollectorTest.ExpectsNotToBeCollectedWhileWaitingForAnyAggregate (1 ms)' >> project/third_party/libs/test.out
 echo 'Text added in test.out file.'
+echo 'Filtering test.out.'
+grep FAILED project/third_party/libs/test.out
+
 
 
 
