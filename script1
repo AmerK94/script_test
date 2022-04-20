@@ -1,0 +1,34 @@
+#!/bin/bash
+echo 'Starting script'
+echo 'Removing previous directories if existed...'
+rm -r project
+mkdir project
+echo 'New "project" directory created.'
+echo 'Creating directory tree "project/{docs, src, third_party/libs}"...'
+mkdir -p project/{docs,src,third_party/libs}
+echo 'Directories created.'
+echo 'Creating doc.txt in docs directory...'
+touch project/docs/doc.txt
+echo 'doc.txt created.'
+echo 'Creating foo.cpp and main.cpp in src directory...'
+touch project/src/foo.cpp project/src/main.cpp
+echo 'foo.cpp, main.cpp created'
+echo 'Creating tests.out and lib.cpp in libs directory...'
+touch project/third_party/libs/test.out project/third_party/libs/lib.cpp
+echo 'tests.out and lib.cpp created.'
+echo 'Adding text to the doc.txt file...'
+echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada ultrices turpis, dignissim hendrerit tellus laoreet eget. Morbi at mauris fermentum, tincidunt elit quis, maximus dolor. Cras gravida lacus maximus tellus venenatis tincidunt. Proin imperdiet massa vitae velit euismod, nec vehicula sem hendrerit. Nam efficitur nisl faucibus, porttitor lacus quis, mollis massa. Morbi in lorem eget odio mattis porttitor. Morbi arcu dolor, accumsan nec auctor vel, sodales sit amet nibh. Nam congue, ante nec facilisis volutpat, magna purus faucibus turpis, et facilisis diam dui ultrices arcu. Etiam condimentum turpis sem, in blandit diam gravida nec. In vitae lobortis enim. Nullam suscipit malesuada diam fermentum porta. Suspendisse ac ligula eu nisi mollis semper. Cras feugiat purus lacus, sed lacinia justo tristique eget. Nulla non consectetur felis, in eleifend est. Integer feugiat vestibulum diam non suscipit. Ut eleifend sit amet arcu vitae semper.' >> project/docs/doc.txt
+echo 'Text added in doc.txt'
+echo 'adding text to the tests.out file...'
+echo '[ RUN      ] AggregateCollectorTest.ExpectsToBeCollectedOnCreation
+[ FAILED ] AggregateCollectorTest.ExpectsToBeCollectedOnCreation (2 ms)
+[ RUN      ] AggregateCollectorTest.ExpectsNotToBeCollectedWhenWaitingForAggregate
+[       OK  ] AggregateCollectorTest.ExpectsNotToBeCollectedWhenWaitingForAggregate (2 ms)
+[ RUN      ] AggregateCollectorTest.ExpectsToSubscribeAggregateToRecoveryDoneEventOnRecoveryService
+[       OK  ] AggregateCollectorTest.ExpectsToSubscribeAggregateToRecoveryDoneEventOnRecoveryService (2 ms)
+[ RUN      ] AggregateCollectorTest.ExpectsNotToBeCollectedWhileWaitingForAnyAggregate
+[ FAILED ] AggregateCollectorTest.ExpectsNotToBeCollectedWhileWaitingForAnyAggregate (1 ms)' >> project/third_party/libs/test.out
+echo 'Text added in test.out file.'
+
+
+
