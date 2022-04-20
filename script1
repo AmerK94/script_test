@@ -31,6 +31,7 @@ echo '[ RUN      ] AggregateCollectorTest.ExpectsToBeCollectedOnCreation
 echo 'Text added in test.out file.'
 echo 'Filtering test.out.'
 grep FAILED project/third_party/libs/test.out
+grep OK project/third_party/libs/test.out
 
 
 
