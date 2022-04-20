@@ -31,6 +31,7 @@ echo '[ RUN      ] AggregateCollectorTest.ExpectsToBeCollectedOnCreation
 echo 'Text added in test.out file.'
 echo 'Filtering tests.out containing "FAILED"'
 grep FAILED project/third_party/libs/tests.out
+echo 'Filtering tests.out containing "OK"'
 grep OK project/third_party/libs/tests.out
 echo 'Printing final tree of the structure...'
 tree
