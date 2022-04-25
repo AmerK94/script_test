@@ -35,6 +35,7 @@ echo 'Filtering tests.out containing "OK"'
 grep OK project/third_party/libs/tests.out
 echo 'Printing final tree of the structure...'
 tree
+echo "This change is made on macOS"
 
 
 
